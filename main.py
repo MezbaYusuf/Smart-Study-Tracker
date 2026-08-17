@@ -1,7 +1,11 @@
 # All tasks
 tasks = []
 
-# Infinite loop
+# Infinite loop\
+
+#fucntion for showing task
+def show_task():
+    print(tasks)
 while True:
     print('''========== SMART STUDY PLANNER ==========
 
@@ -14,6 +18,8 @@ while True:
 7. Search tasks
 8. Save & Exit
 ''')
+
+
 
     user_choice = int(input("Enter your choice (1-8): "))
 
@@ -43,7 +49,24 @@ while True:
             print("\nTask added successfully!")
             print(task)
 
+
     elif user_choice == 2:
+        print("\n[+] Add study task selected.\n")
+
+    elif user_choice == 3:
+        print("\n[+] View Tasks slected .\n")
+
+
+    elif user_choice == 4:
+        print("\n[+] Add study task selected.\n")
+
+    elif user_choice == 5:
+        print("\n[+] Add study task selected.\n")
+
+    elif user_choice == 6:
+        print("\n[+] Add study task selected.\n")
+
+    elif user_choice == 7:
         print("\n[+] Add study task selected.\n")
 
     elif user_choice == 8:

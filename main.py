@@ -6,6 +6,24 @@ tasks = []
 #fucntion for showing task
 def show_task():
     print(tasks)
+
+#fucntion to add tasks : 
+def add_tasks():
+    
+            subject = input("Enter the subject here: ")
+            task["subject"] = subject
+
+            task_name = input("Enter the task here: ")
+            task["task_name"] = task_name
+
+            priority = input("Enter the priority here: ")
+            task["priority"] = priority
+
+            deadline = input("Enter the deadline here: ")
+            task["deadline"] = deadline
+
+            tasks.append(task)
+            return task
 while True:
     print('''========== SMART STUDY PLANNER ==========
 
@@ -29,25 +47,10 @@ while True:
 
         for i in range(task_number):
             # One task
-            task = {}
-
-            subject = input("Enter the subject here: ")
-            task["subject"] = subject
-
-            task_name = input("Enter the task here: ")
-            task["task_name"] = task_name
-
-            priority = input("Enter the priority here: ")
-            task["priority"] = priority
-
-            deadline = input("Enter the deadline here: ")
-            task["deadline"] = deadline
-
-            # Add one task to all tasks
-            tasks.append(task)
-
+            task = add_tasks()
             print("\nTask added successfully!")
             print(task)
+
 
 
     elif user_choice == 2:
@@ -55,7 +58,7 @@ while True:
 
     elif user_choice == 3:
         print("\n[+] View Tasks slected .\n")
-
+        show_task()
 
     elif user_choice == 4:
         print("\n[+] Add study task selected.\n")

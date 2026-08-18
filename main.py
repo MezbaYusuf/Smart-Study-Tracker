@@ -34,9 +34,14 @@ def complete_task():
         while True:
             try:
                 complete_task_number = int(input(f"Which task you want to complete (1 - {len(tasks)}) : ")) 
+
+                if complete_task_number <1 or complete_task_number > len(tasks):
+                    print("Invalid Task Number")
+                    continue    
                 break
             except ValueError:
                 print("Please enter a valid number!")
+           
 
         complete_task_number -= 1  
  
@@ -44,7 +49,12 @@ def complete_task():
         new_complete_task["completed"] = True 
 
 #functions to delete tasks :  
- 
+def delete_task(delete_task_number):
+    delete_task_number -= 1 
+    tasks.pop(delete_task_number)
+
+
+    
 while True: 
     print('''========== SMART STUDY PLANNER ========== 
  
@@ -103,7 +113,13 @@ while True:
  
     elif user_choice == 5: 
         print("\n[+] Add study task selected.\n") 
- 
+        while True : 
+            try:
+                delete_task_number = int(input("Enter the task number you want to delete : "))
+                break
+            except ValueError : 
+                print("Please provide us a valid number.")
+        delete_task(delete_task_number)
     elif user_choice == 6: 
         print("\n[+] Add study task selected.\n") 
  

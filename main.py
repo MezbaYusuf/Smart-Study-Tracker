@@ -1,7 +1,7 @@
 # All tasks
 tasks = []
 
-# Infinite loop\
+# Infinite loop
 
 #fucntion for showing task
 def show_task():
@@ -9,7 +9,7 @@ def show_task():
 
 #fucntion to add tasks : 
 def add_tasks():
-    
+            task = {}
             subject = input("Enter the subject here: ")
             task["subject"] = subject
 
@@ -55,13 +55,18 @@ while True:
 
     elif user_choice == 2:
         print("\n[+] Add study task selected.\n")
+        add_tasks()        
 
     elif user_choice == 3:
         print("\n[+] View Tasks slected .\n")
         show_task()
 
     elif user_choice == 4:
-        print("\n[+] Add study task selected.\n")
+        print("\n[+] Complete task selected.\n")
+        complete_task_number = int(input(f"Which task you want to complete (0-{len(tasks)}) : "))
+        complete_task_number -= 1 
+               
+
 
     elif user_choice == 5:
         print("\n[+] Add study task selected.\n")

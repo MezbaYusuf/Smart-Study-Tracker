@@ -21,9 +21,21 @@ def add_tasks():
 
             deadline = input("Enter the deadline here: ")
             task["deadline"] = deadline
+            
+            #task status
+            task["completed"] = False
 
             tasks.append(task)
+
             return task
+#fucntion to mark task as complete : 
+def complete_task():
+        complete_task_number = int(input(f"Which task you want to complete (1 - {len(tasks)}) : "))
+        complete_task_number -= 1 
+
+        new_complete_task = tasks[complete_task_number]
+        new_complete_task["completed"] = True
+
 while True:
     print('''========== SMART STUDY PLANNER ==========
 
@@ -63,10 +75,7 @@ while True:
 
     elif user_choice == 4:
         print("\n[+] Complete task selected.\n")
-        complete_task_number = int(input(f"Which task you want to complete (0-{len(tasks)}) : "))
-        complete_task_number -= 1 
-               
-
+        complete_task()
 
     elif user_choice == 5:
         print("\n[+] Add study task selected.\n")

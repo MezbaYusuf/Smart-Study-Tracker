@@ -35,6 +35,7 @@ def complete_task():
 
         new_complete_task = tasks[complete_task_number]
         new_complete_task["completed"] = True
+#functions to delete tasks : 
 
 while True:
     print('''========== SMART STUDY PLANNER ==========
@@ -75,7 +76,9 @@ while True:
 
     elif user_choice == 4:
         print("\n[+] Complete task selected.\n")
-        complete_task()
+        task_complete_number = int(input("How many tasks you want to complete : "))
+        for i in range(task_complete_number):
+            complete_task()
 
     elif user_choice == 5:
         print("\n[+] Add study task selected.\n")

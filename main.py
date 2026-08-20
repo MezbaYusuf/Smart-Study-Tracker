@@ -65,6 +65,7 @@ def view_progress():
     total_task = len(tasks)
     total_complete_task_number = 0
 
+
     for i in tasks:
         if i["completed"] == True:
             total_complete_task_number += 1
@@ -74,7 +75,7 @@ def view_progress():
     print("Total tasks:", total_task)
     print("Completed tasks:", total_complete_task_number)
     print("Incomplete tasks:", total_incomplete_task_number)
-
+    print(f"{(total_complete_task_number / total_task) * 100} is the percentance")
 
 # Infinite loop
 while True:

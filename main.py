@@ -87,8 +87,7 @@ while True:
 4. Complete a task
 5. Delete a task
 6. View progress
-7. Search tasks
-8. Save & Exit
+7. Save & Exit
 ''')
 
     while True:
@@ -159,10 +158,9 @@ while True:
         print("\n[+] View progress selected.\n")
         view_progress()
 
-    elif user_choice == 7:
-        print("\n[+] Search tasks selected.\n")
 
-    elif user_choice == 8:
+
+    elif user_choice == 7:
         print("\nExiting... Goodbye!\n")
         break
 
